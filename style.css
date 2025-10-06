@@ -175,7 +175,7 @@ section ul li:last-child {
 
 /* Experiência */
 #experiencia p strong {
-    color: var(--heading-color);
+    color: #cdcfd1;
     font-size: 1.1rem;
     display: block;
     margin-top: 1.5rem;
@@ -194,7 +194,7 @@ section ul li:last-child {
 
 #contato h3 {
     font-size: 2rem;
-    color: var(--heading-color);
+    color: var(--secondary-color);
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
@@ -267,7 +267,7 @@ section ul li:last-child {
 /* Rodapé */
 footer {
     background: var(--background-dark);
-    color: rgba(255, 255, 255, 0.8);
+    color: secondary-color;
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: auto;
@@ -369,4 +369,168 @@ footer {
     #contato a.instagram i {
         font-size: 1.2rem;
     }
+}
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #1e1e1e;
+    --primary-color: #0077ff;
+    --card-bg: #ffffff;
+}
+
+/* 🌙 Tema escuro */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --primary-color: #00adb5;
+    --card-bg: #1e1e1e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background 0.3s, color 0.3s;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#toggle-theme {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#toggle-theme:hover {
+    opacity: 0.85;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    margin: 0.5rem 0;
+}
+
+.links a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-dark); /* Cabeçalho escuro no modo claro */
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* ===== NAVEGAÇÃO ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ===== BOTÃO DE TEMA ===== */
+#toggle-theme {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#toggle-theme:hover {
+    opacity: 0.85;
+}
+
+/* ===== AJUSTE AUTOMÁTICO NO MODO ESCURO ===== */
+.dark-mode header {
+    background: var(--card-bg); /* fundo escuro no dark mode */
+}
+
+.dark-mode nav a {
+    color: var(--text-color);
 }
