@@ -44,10 +44,11 @@ Publicação do site no GitHub Pages.
 
 Se quiser trocar uma ideia, colaborar em algum projeto ou apenas dizer olá:
 
-✉️ E-mail: seuemail@exemplo.com
+✉️ E-mail: bernardogomesg317@gmail.com
 
-💼 LinkedIn: linkedin.com/in/seuusuario
+💼 LinkedIn: www.linkedin.com/in/
+christyan-bernardo-gomes-de-almeida-47b749220
 
-🧑‍💻 GitHub: github.com/seuusuario
+🧑‍💻 GitHub: github.com/Christyan-Almeida
 
 💬 “A melhor forma de prever o futuro é criá-lo.” — Alan Kay
