@@ -30,22 +30,101 @@ body {
 }
 
 /* Cabeçalho */
+/* ===== BASE GERAL ===== */
 header {
-    background: var(--background-dark);
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 4px 10px var(--shadow-medium);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-header);
+    flex-wrap: wrap;
 }
 
 header h1 {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    margin: 0;
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+#toggle-theme {
+    margin-left: 1rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* ===== TABLETS (largura até 992px) ===== */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1rem;
+    }
+
+    #toggle-theme {
+        margin-top: 0.8rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* ===== CELULARES (largura até 600px) ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 0.5rem;
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    #toggle-theme {
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
 
 nav ul {
     list-style: none;
