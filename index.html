@@ -130,26 +130,29 @@
         <div class="email-form-container">
             <h4>Me Envie um E-mail</h4>
             
-                <form id="contact-form">
-    <div class="form-group">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
-    <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="assunto">Assunto:</label>
-        <input type="text" id="assunto" name="assunto" required>
-    </div>
-    <div class="form-group">
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+   <form id="contact-form">
+  <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+  </div>
+
+  <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+      <label for="assunto">Assunto:</label>
+      <input type="text" id="assunto" name="assunto" required>
+  </div>
+
+  <div class="form-group">
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn">Enviar Mensagem</button>
 </form>
-            </form>
         </div>
            
     </section>
@@ -157,32 +160,39 @@
         <p>&copy; 2025 Christyan Almeida. Todos os direitos reservados.</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function() {
+    // Substitua pela sua chave pública do EmailJS
+    emailjs.init({
+      publicKey: "lX2_UKUzZfOuFXBHm"
+    });
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Dados do formulário
     const params = {
-        from_name: document.getElementById('nome').value,
-        from_email: document.getElementById('email').value,
-        subject: document.getElementById('assunto').value,
-        message: document.getElementById('mensagem').value
+      name: document.getElementById('nome').value,
+      email: "bernardogomesg317@gmail.com", // Seu email padrão (já configurado como default no EmailJS)
+      assunto: document.getElementById('assunto').value,
+      mensagem: document.getElementById('mensagem').value,
+      title: document.getElementById('assunto').value // usado no campo {{title}}
     };
 
-    // Substitua pelo SEU Template ID
-    const serviceID = "service_afbyg8b";
-    const templateID = "template_vd5z1ow";
+    const serviceID = "service_afbyg8b"; // seu ID de serviço
+    const templateID = "template_nrt472q"; // seu ID de template
 
     emailjs.send(serviceID, templateID, params)
-    .then(response => {
+      .then(() => {
         alert("✅ Mensagem enviada com sucesso!");
         document.getElementById('contact-form').reset();
-    })
-    .catch(error => {
-        alert("❌ Ocorreu um erro. Tente novamente mais tarde.");
-        console.error("Erro:", error);
-    });
-});
+      })
+      .catch((error) => {
+        console.error("Erro ao enviar:", error);
+        alert("❌ Ocorreu um erro. Verifique o console.");
+      });
+  });
 </script>
 
 </body>
