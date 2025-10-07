@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <!-- Ícones Whatsapp e Insta -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("SUA_PUBLIC_KEY_AQUI"); // substitua pela sua chave pública
+        })();
+    </script>
+
 </head>
+
 <body>
 
     <header>
@@ -21,18 +30,21 @@
                 <li><a href="#cursos">Cursos</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contato">Contato</a></li>
-                  <button id="toggle-theme">🌙 Alternar Tema</button>
+                <button id="toggle-theme">🌙 Alternar Tema</button>
     </header>
-            </ul>
-        </nav>
+    </ul>
+    </nav>
     </header>
 
     <section id="hero">
         <img src="perfil.jpg" alt="Foto de Christyan Almeida" class="foto-perfil">
         <h1>
-            Sou Graduando em Análise e Desenvolvimento de Sistemas (ADS), cursando o quinto período na Newton Paiva, no turno da noite.
-            Sou apaixonado por tecnologia e cada vez mais buscando conhecimento. Até hoje, as disciplinas que mais gostei foram BI e Linguagem de Programação.
-            Nasci em Belo Horizonte, comecei a faculdade em 2023, aos 20 anos. Meus hobbies são praticar esportes, assistir futebol e jogar vídeo-game. 
+            Sou Graduando em Análise e Desenvolvimento de Sistemas (ADS), cursando o quinto período na Newton Paiva, no
+            turno da noite.
+            Sou apaixonado por tecnologia e cada vez mais buscando conhecimento. Até hoje, as disciplinas que mais
+            gostei foram BI e Linguagem de Programação.
+            Nasci em Belo Horizonte, comecei a faculdade em 2023, aos 20 anos. Meus hobbies são praticar esportes,
+            assistir futebol e jogar vídeo-game.
             Amo muito minha família, tenho duas irmãs e fiquei noivo em 2025.
             Torço para o Cruzeiro desde a infância e minha família inteira é cruzeirense.
         </h1>
@@ -43,7 +55,8 @@
         <p>
             Meu principais projetos foram elaborados na faculdade. Entre eles estão:
             <br>Sistema para uma padaria feito em Java, utilizando interface gráfica;
-            <br>Dashboard utilizando Power BI para mostrar um relatório de vacinação contra Covid na região sudeste do Brasil;
+            <br>Dashboard utilizando Power BI para mostrar um relatório de vacinação contra Covid na região sudeste do
+            Brasil;
             <br>Sistema Web para mostrar benefícios do Home Office;
             <br>Estação de abastecimento de carros elétricos para locais remotos.
         </p>
@@ -56,7 +69,7 @@
             <li>Banco de Dados MySQL</li>
             <li>Power BI e Excel Avançado</li>
             <li>HTML5, CSS3 e JavaScript</li>
-        
+
         </ul>
     </section>
 
@@ -64,18 +77,21 @@
         <h2>Experiência</h2>
         <p><strong>Projetista de Redes</strong> (Blink Telecom, 2025)</p>
         <p>Desenvolver projetos de redes FTTH utilizando softwares específicos (AutoCAD, Geosite).
-           <br> • Realizar estudos de viabilidade técnica e análise de infraestrutura existente.
-           <br> • Dimensionar materiais e equipamentos necessários para a execução do projeto.
-           <br> • Criar diagramas de rede, planta baixa e outros documentos técnicos necessários.
-           <br> • Garantir que os projetos atendam às normas técnicas e regulatórias vigentes.
-           <br> • Trabalhar em colaboração com equipes de campo, dando suporte relacionados ao projeto elaborado anteriormente.</p>
+            <br> • Realizar estudos de viabilidade técnica e análise de infraestrutura existente.
+            <br> • Dimensionar materiais e equipamentos necessários para a execução do projeto.
+            <br> • Criar diagramas de rede, planta baixa e outros documentos técnicos necessários.
+            <br> • Garantir que os projetos atendam às normas técnicas e regulatórias vigentes.
+            <br> • Trabalhar em colaboração com equipes de campo, dando suporte relacionados ao projeto elaborado
+            anteriormente.
+        </p>
         <br>
         <p><strong>Assistente de Suporte Operacional</strong> (Blink Telecom, 2023 - 2024)</p>
         <p>Apoio aos técnicos em campo, fazendo:
-           <br> Configuração de Modens;
-           <br> Configuração de PPPoE, para realizar conexão entre cliente e provedor;
-           <br> Conferência de Caixas de Terminador Óptico (caixas do poste);
-           <br> Configuração de linhas telefônicas.</p>
+            <br> Configuração de Modens;
+            <br> Configuração de PPPoE, para realizar conexão entre cliente e provedor;
+            <br> Conferência de Caixas de Terminador Óptico (caixas do poste);
+            <br> Configuração de linhas telefônicas.
+        </p>
     </section>
 
     <section id="cursos">
@@ -93,7 +109,8 @@
         <p>
             Além da tecnologia, gosto de praticar esportes, entre eles futebol e corrida.<br>
             Sou fã de futebol europeu, principalmente a Champions League.<br>
-            Gosto de assistir filmes e séries e comédia é meu esitlo favorito. Sou um grande admirador do cinema nacional
+            Gosto de assistir filmes e séries e comédia é meu esitlo favorito. Sou um grande admirador do cinema
+            nacional
         </p>
     </section>
 
@@ -107,12 +124,67 @@
             <a href="https://instagram.com/christyangomes" target="_blank" class="instagram">
                 <i class="fa-brands fa-instagram"></i> Instagram
             </a>
+             
         </p>
-    </section>
 
+        <div class="email-form-container">
+            <h4>Me Envie um E-mail</h4>
+            
+                <form id="contact-form">
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" required>
+    </div>
+    <div class="form-group">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+</form>
+            </form>
+        </div>
+           
+    </section>
     <footer>
         <p>&copy; 2025 Christyan Almeida. Todos os direitos reservados.</p>
     </footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Dados do formulário
+    const params = {
+        from_name: document.getElementById('nome').value,
+        from_email: document.getElementById('email').value,
+        subject: document.getElementById('assunto').value,
+        message: document.getElementById('mensagem').value
+    };
+
+    // Substitua pelo SEU Template ID
+    const serviceID = "service_afbyg8b";
+    const templateID = "template_vd5z1ow";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(response => {
+        alert("✅ Mensagem enviada com sucesso!");
+        document.getElementById('contact-form').reset();
+    })
+    .catch(error => {
+        alert("❌ Ocorreu um erro. Tente novamente mais tarde.");
+        console.error("Erro:", error);
+    });
+});
+</script>
+
 </body>
+
 </html>
